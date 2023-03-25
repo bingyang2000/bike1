@@ -1,0 +1,2 @@
+<!--pages/port/port.wxml-->
+<map class="m" show-compass="true" show-scale="true" enable-traffic="true" markers="{{markers}}" latitude="{{markers[0].latitude}}" longitude="{{markers[0].longitude}}"></map>

@@ -1,0 +1,26 @@
+/* pages/taskdetail/taskdetail.wxss */
+.mm{
+  width: 100%;
+  height: calc(100vh - 36px);
+}
+.task
+{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  border-bottom: 2px solid #e5e5e5;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.time
+{
+  line-height: 60px;
+  margin: 10px;
+  vertical-align: middle;
+}
+.detail
+{
+  height: 60px;
+  margin: 10px;
+}

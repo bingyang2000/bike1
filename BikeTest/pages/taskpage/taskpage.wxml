@@ -1,0 +1,32 @@
+<!--pages/taskpage/taskpage.wxml-->
+<wxs src="../../utils/filter.wxs" module="filter" />
+<!-- <view class="text">{{filter.formatTime(时间戳,'Y-M-D h:m')}}</view> -->
+<tabs tabs="{{titles}}" bindtransIndex="changeIndex"></tabs>
+
+<view wx:if="{{ activeIndex==0 }}">
+  <map class="mm" show-compass="true" show-scale="true" enable-traffic="true" markers="{{goMarkers}}" latitude="{{goMarkers[0].latitude}}" longitude="{{goMarkers[0].longitude}}"></map>
+</view>
+
+<view wx:if="{{ activeIndex==1 }}">
+  <view class="task" wx:for="{{tasks}}" wx:key="index">
+    <view class="time">{{filter.formatTime(item.firstTime,'Y-M-D h:m')}}</view>
+    <view class="detail">
+       <view class="detailcon" bindtap="startTask" data-index="{{index}}">开启</view>
+    </view>
+    
+  </view>
+</view>
+<view wx:if="{{ activeIndex==2 }}">
+  <view class="task" wx:for="{{tasks}}" wx:key="index">
+    <view class="time">{{filter.formatTime(item.firstTime,'Y-M-D h:m')}}</view>
+      <view class="detail"> <view class="detailcon" bindtap="setCurrentTask" data-index="{{index}}">详情</view></view>
+     
+  </view>
+    
+</view>
+<view wx:if="{{ activeIndex==3 }}">
+  <view class="task"wx:for="{{tasks}}" wx:key="index">
+      <view class="time">{{filter.formatTime(item.firstTime,'Y-M-D h:m')}}</view>
+      <view class="detail"> <view class="detailcon" bindtap="setCurrentTask" data-index="{{index}}">详情</view></view>
+  </view>
+</view>

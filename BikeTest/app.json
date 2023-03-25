@@ -1,0 +1,60 @@
+{
+  "pages": [
+   
+    "pages/port/port",
+    "pages/profile/profile",
+    "pages/taskpage/taskpage",
+    "pages/logs/logs",
+    "pages/taskdetail/taskdetail", 
+    "pages/login_regist/login_regist",
+    "pages/login/login"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于查看附近站点信息和任务详情" 
+    }
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#11EEEE",
+    "navigationBarTitleText": "共享单车调度系统",
+    "backgroundColor": "#bdbdbd",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+  },
+  "style": "v2",
+  "tabBar": {
+    "color": "#7F8389",
+    "selectedColor": "#000000",
+    "borderStyle": "black",
+    "list": [
+      {
+        "text": "站点",
+        "pagePath": "pages/port/port",
+        "iconPath": "resources/e12860cb450a4c012c47ac95c933fb3a.png",
+        "selectedIconPath": "resources/f78f9afcd0b4998bdfc816203bb4c6dd.png"
+      },
+      {
+        "text": "任务",
+        "pagePath": "pages/taskpage/taskpage",
+        "iconPath": "resources/9ed52ecc6de7058a799290b08296230a.png",
+        "selectedIconPath": "resources/1c95a1701b58f4dc4d5f768d6f148714.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/profile/profile",
+        "iconPath": "resources/f27bd7cf9958fc5000f18d7f19714c96.png",
+        "selectedIconPath": "resources/a0d0f70cdd378be88638c61a9cfff0f7.png"
+      }
+    ],
+    "backgroundColor": "#F7F7FA"
+  },
+  "networkTimeout": {
+    "connectSocket": 50000,
+    "request": 50000,
+    "downloadFile": 50000,
+    "uploadFile": 50000
+  },
+  "sitemapLocation": "sitemap.json"
+  
+}

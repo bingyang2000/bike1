@@ -1,0 +1,17 @@
+/* components/tabs.wxss */
+.tabs_view {
+  display: flex;
+  width: 92%;
+  margin: 0 auto;
+  justify-content: space-between;
+  height: 36px;
+  line-height: 36px;
+}
+.tabs_item {
+  width: 25%;
+  text-align: center;
+}
+.active {
+  color: #11EEEE;
+  border-bottom: 2px solid #11EEEE;
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="henu.edu.BikeDispatch.Dao.D_tDao">
+<!--    public int addd_t(d_t x);-->
+    <insert id="addd_t" parameterType="henu.edu.BikeDispatch.pojo.d_t">
+        insert into d_t(dId,tId) values(#{dId},#{tId})
+    </insert>
+<!--    public int deld_t(d_t x);-->
+    <delete id="deld_t" parameterType="henu.edu.BikeDispatch.pojo.d_t">
+        delete from d_t where dId=#{dId},tId = #{tId}
+    </delete>
+<!--    public List<Integer> getTidByDid(Integer dispatcherId);-->
+    <select id="getTidByDid" resultType="java.lang.Integer">
+        select tId from d_t where dId=#{dispatcherId}
+    </select>
+<!--    public List<d_t> getd_t();-->
+    <select id="getd_t" resultType="henu.edu.BikeDispatch.pojo.d_t">
+        select * from d_t
+    </select>
+
+
+</mapper>

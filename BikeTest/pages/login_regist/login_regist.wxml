@@ -1,0 +1,18 @@
+<view class="c-minheight wx-view_FhhAKO">
+    <view class="ban_view">
+      <swiper class="banner" autoplay circular indicator-dots>
+        <swiper-item wx:for="{{album.imgs}}" wx:key="*this">
+          <image class="my_img" mode="aspectFill" src="{{baseURL+item}}"></image>
+        </swiper-item>
+      </swiper>
+
+    </view>
+    <view class="c-minheight wx-view_JjAvLE" >
+        <navigator class="wx-navigator_91rIxS" url="/pages/login/login"  hover-class="navigator-hover">
+            <text class="c-block wx-text_T7Ctll" >登录</text>
+        </navigator>
+        <navigator class="wx-navigator_91rIxS"  hover-class="navigator-hover">
+            <text class="c-block wx-text_T7Ctll" >注册</text>
+        </navigator>
+    </view>
+</view>

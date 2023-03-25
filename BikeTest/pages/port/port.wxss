@@ -1,0 +1,6 @@
+/* pages/port/port.wxss */
+.m{
+  margin: 2%;
+  width: 100%;
+  height: 100%;
+}

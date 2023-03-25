@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="henu.edu.BikeDispatch.Dao.DispatcherDao">
+    <!--    public dispatcher getdispatcerByJobNumber(@Param("jobNumber") String jobNumber, @Param("password") String password);-->
+    <select id="getdispatcerByJobNumber" resultType="henu.edu.BikeDispatch.pojo.dispatcher">
+        select id+1,jobNumber,password,cardId,phoneNumber,sex,successNum,failNum,name,dist
+        from dispatcher
+        where  jobNumber= #{jobNumber} and password = #{password}
+    </select>
+    <!--    public int addDispatcher(dispatcher disp);-->
+    <insert id="addDispatcher" parameterType="henu.edu.BikeDispatch.pojo.dispatcher">
+        insert into dispatcher(jobNumber,password,phoneNumber,sex,name) values(#{jobNumber},#{password},#{phoneNumber},#{sex},#{name})
+    </insert>
+    <!--    public int delDispatcher(String jobNumber);-->
+    <delete id="delDispatcher">
+        delete from dispatcher where jobNumber = #{jobNumber}
+    </delete>
+    <!--    public int updateDispatcherSuccess(Integer id);-->
+    <update id="updateDispatcherSuccess">
+        update dispatcher set successNum=successNum+1 where id=#{id}
+    </update>
+    <!--    public int updateDispatcherFail(Integer id);-->
+    <update id="updateDispatcherFail">
+        update dispatcher set failNum=failNum+1 where id=#{id}
+    </update>
+    <!--    public List<dispatcher> getDispatcher();-->
+    <select id="getDispatcher" resultType="henu.edu.BikeDispatch.pojo.dispatcher">
+        select * from dispatcher
+    </select>
+    <!-- public int getDIdByJobNumber(String jobNumber);-->
+    <select id="getDIdByJobNumber" resultType="java.lang.Integer">
+        select id from dispatcher where jobNumber=#{jobNumber}
+    </select>
+
+</mapper>

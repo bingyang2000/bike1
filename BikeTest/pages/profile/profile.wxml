@@ -1,0 +1,72 @@
+<!--pages/profile/profile.wxml-->
+<!--pages/my/my.wxml-->
+<view class="bg">
+  <view class="head">
+            <view class="headimna">
+                <image class="headimg" data-c_e_id="wx_image_0122d5f9" mode="scaleToFill" style="width: 120rpx; height: 120rpx;  background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat; background-image: url(https://tse1-mm.cn.bing.net/th/id/R-C.64429d0ee58b9226f59deadd150c7229?rik=EIgp%2bWfQRCcYLQ&riu=http%3a%2f%2ftupian.qqw21.com%2farticle%2fUploadPic%2f2019-9%2f201991821452361816.jpg&ehk=e3mvELMv2IH1jnOseqwBqIplrsi29afCu1xUG3SouHc%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1); "/>
+                
+            </view>
+            <view class="headname">
+              <navigator wx:if="{{isLogin}}"  hover-class="navigator-hover">
+                  <text class="c-block wx-text_YBn1Rx" data-c_e_id="wx_text_eaec4f40">{{user.name}}</text>
+              </navigator>
+              <navigator wx:if="{{!isLogin}}" url="/pages/login_regist/login_regist" open-type="reLaunch" hover-class="navigator-hover">
+                  <text class="wx-text_YBn1Rx" >未登录，点击此处登录</text>
+              </navigator>
+            </view>
+            
+  </view>
+</view>
+<view class="hr"></view>
+<view class="grade">
+  <view class="pp">
+    <text>{{user.successNum}}/次</text>
+    <text>完成次数</text>
+  </view>
+  <view class="pp">
+    <text>{{user.failNum}}/次</text>
+    <text>失败次数</text>
+  </view>
+  <view class="pp">
+    <text>王者</text>
+    <text>当前段位</text>
+  </view>
+</view>
+<view class='item'>
+  <view class="title">手机绑定</view>
+  <view class="detail2">
+    <text>〉</text>
+  </view>
+</view>
+<view class="line"></view>
+
+<view class='item'>
+  <view class="title">用户协议</view>
+  <view class="detail2">
+    <text>〉</text>
+  </view>
+</view>
+
+<view class="hr"></view>
+<view class="line"></view>
+<view class="item">
+  <view class="title">我的收藏</view>
+  <view class="detail2">
+    <text> 〉</text>
+  </view>
+</view>
+<view class="line"></view>
+<view class="item">
+  <view class="title">意见反馈</view>
+  <view class="detail2">
+    <text> 〉</text>
+  </view>
+</view>
+<view class="line"></view>
+<view class="item">
+  <view class="title">设置</view>
+  <view class="detail2">
+    <text> 〉</text>
+  </view>
+</view>
+<view class="hr"></view>

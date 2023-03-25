@@ -1,0 +1,104 @@
+.bg {
+  height: 140px;
+  background:linear-gradient( #33CCFF,#CC33FF); 
+}
+
+.head {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.headimna
+{
+  width:100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 50%;
+  
+}
+.headimg
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 50%;
+  
+}
+.headname {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grade
+{
+  height:60px;
+  padding:20rpx 10rpx;
+  display: flex;
+  /*设置元素对齐方式 --- 两边贴边，剩余空间平分*/
+  justify-content: space-between;
+}
+.pp
+{ 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.wx-text_YBn1Rx
+{
+  color: pink;
+}
+.login {
+  display: flex;
+  color: #fff;
+  font-size: 15px;
+  margin-top: 15rpx;
+  justify-content: center;
+}
+
+.button {
+  margin: 10px;
+  font-size: 14px;
+}
+
+.head image {
+  border-radius: 50%;
+}
+
+.hr {
+  width: 100%;
+  height: 15px;
+  background-color: #f4f5f6;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  font-size: 15px;
+}
+
+.detail2 {
+  font-size: 15px;
+  position: absolute;
+  right: 10px;
+  height: 50px;
+  line-height: 50px;
+  color: #888;
+}
+
+.line {
+  border: 1px solid #ccc;
+  opacity: 0.2;
+}

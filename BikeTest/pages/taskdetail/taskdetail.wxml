@@ -1,0 +1,19 @@
+<!--pages/taskdetail/taskdetail.wxml-->
+<wxs src="../../utils/filter.wxs" module="filter" />
+<!-- <view class="text">{{filter.formatTime(时间戳,'Y-M-D h:m')}}</view> -->
+<view class="task">
+      <view class="time">发布时间：{{filter.formatTime(task.firstTime,'Y-M-D h:m')}}</view>
+      <view class="detail"></view>   
+  </view>
+  <view class="task">
+      <view class="time">开启时间：{{filter.formatTime(task.startTime,'Y-M-D h:m')}}</view>
+      <view class="detail"></view>   
+  </view>
+  <view class="task">
+      <view class="time">结束时间：{{filter.formatTime(task.endTime,'Y-M-D h:m')}}</view>
+      <view class="detail"></view>   
+  </view>
+  <view class="task">
+      <view class="time">需要时间：{{task.needSpan}}小时</view>
+      <view class="detail"></view>   
+  </view>

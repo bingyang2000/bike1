@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="henu.edu.BikeDispatch.Dao.taskDao">
+<!--    //创建任务-->
+<!--    public int addTask(task t);-->
+    <insert id="addTask" parameterType="henu.edu.BikeDispatch.pojo.task">
+        insert into task(firstTime,state,needSpan) values(#{firstTime},#{state},#{needSpan})
+    </insert>
+<!--    //查询所有任务-->
+<!--    public String getAllTask();-->
+    <select id="getAllTask" resultType="henu.edu.BikeDispatch.pojo.task">
+        select *
+        from task;
+    </select>
+<!--    //查询所有未完成任务-->
+<!--    public List<task> getTaskByState(String state);-->
+    <select id="getTaskByState" resultType="henu.edu.BikeDispatch.pojo.task">
+        select *
+        from task
+        where state=#{state};
+    </select>
+<!--    //按Id查询任务-->
+<!--    public List<task> getTaskById(Integer id);-->
+    <select id="getTaskByJobNumber" resultType="henu.edu.BikeDispatch.pojo.task">
+        select *
+        from task
+        where id=#{tid} and state=#{state};
+    </select>
+<!--    //启动任务-->
+<!--    public int startTask(Integer id,Date date);-->
+    <update id="startTask">
+        update task set state="进行中", startTime=#{date} where id=#{id}
+    </update>
+<!--    //提交任务-->
+<!--    public int compeleteTask(Integer id,Date date);-->
+    <update id="compeleteTask" >
+        update task set state="已完成" ,endTime=#{date} where id=#{id}
+    </update>
+
+<!--    //删除任务，按id-->
+<!--    public int delTask(Integer id);-->
+    <delete id="delTask" parameterType="java.lang.Integer">
+        delete
+        from task
+        where id=#{id};
+    </delete>
+
+
+
+</mapper>

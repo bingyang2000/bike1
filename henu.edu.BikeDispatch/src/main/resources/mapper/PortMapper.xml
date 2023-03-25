@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="henu.edu.BikeDispatch.Dao.PortDao">
+<!--    public int addPort(port p);
+    public int delPort(Integer ID);
+    public int updatePort(port p);
+    public List<port> getPort();
+    public port getPortById(Integer ID);-->
+    <insert id="addPort" parameterType="henu.edu.BikeDispatch.pojo.port">
+        insert into port(ID,bikeCount,dist,needBikeCount,jindu,weidu) values(#{ID},#{bikeCount},#{dist},#{needBikeCount},#{jindu},#{weidu})
+    </insert>
+    <delete id="delPort" parameterType="java.lang.Integer">
+        delete from port where ID = #{ID}
+    </delete>
+    <update id="updatePort" parameterType="henu.edu.BikeDispatch.pojo.port">
+        update port set bikeCount=#{p.bikeCount} ,needbikeCount=#{p.needbikecount}
+        where ID=#{p.ID}
+    </update>
+    <select id="getPort" resultType="henu.edu.BikeDispatch.pojo.port">
+        select * from port
+    </select>
+    <select id="getPortById" resultType="henu.edu.BikeDispatch.pojo.port">
+        select * from port where ID=#{ID}
+    </select>
+<!--    //获取需调度车辆数-->
+<!--    public int getNeedNum();-->
+    <select id="getNeedNum" resultType="Integer">
+        select sum(needBikeCount) from port where needBikeCount > 0
+    </select>
+<!--    //获取多余车辆数-->
+<!--    public int getNoNeedNum();-->
+    <select id="getNoNeedNum" resultType="Integer">
+        select sum(needBikeCount) from port where needBikeCount &lt; 0
+    </select>
+<!--    //获取需要调度的站点-->
+<!--    public List<port> getTaskPort(Integer dist);-->
+    <select id="getTaskPort" resultType="henu.edu.BikeDispatch.pojo.port">
+        select ID,jindu,weidu,needBikeCount,bikeCount
+        from port
+        where needBikeCount != 0 and dist=#{dist}
+    </select>
+
+</mapper>
